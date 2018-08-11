@@ -11,7 +11,7 @@
 	"displayOptions":{"exportCharset":"UTF-8"},
 	"browserSupport":"gcs",
 	"inRepository":true,
-	"lastUpdated":"2015-02-21 07:16:26"
+	"lastUpdated":"2018-07-22 07:16:26"
 }
 
 /* TO DO
@@ -42,6 +42,7 @@ Wikipedia CS1:		https://en.wikipedia.org/wiki/Help:Citation_Style_1
 	issue:"issue",
 	pages:"pages",
 	number:"episodeNumber",
+	language:"language",
 	type:"thesisType",
 	doi:"DOI",
 	isbn:"ISBN",
@@ -471,7 +472,12 @@ function doExport() {
 				"Third World Quarterly","Heroes Never Die","GamesIndustry.biz","USA Today","CNNMoney","Recode",
 				"Columbia Journalism Review","XLR8R","The Economist","AllThingsD","Recode","Mashable","DNAinfo",
 				"FiveThirtyEight","The Atlantic","TheWrap","TechCrunch","Book Week","ROAR Magazine","Artsy", "OkayAfrica",
-				"Times Live","Vancouver Sun", "The Architect's Newspaper"];
+				"Times Live","Vancouver Sun", "The Architect's Newspaper", "Art Digest", "Burlington Magazine",
+				"Apollo: The International Magazine for Collectors", "Cahiers d'Art", "American Artist", 
+				"Arts & Architecture", "Arts Magazine", "International Studio", "Architectural Review",
+				"Studio International", "Casabella", "Artscanada", "Art International", "Gazette des Beaux Arts",
+				"Art & Australia", "AP News", "Abitare", "Nintendo Life", "Business Insider", "Washington Post", "ESPN.com",
+				"Overwatch Wire", "Dot Esports"];
 			for (var i=0; i<linkAnyOfThese.length; i++) {
 				if (properties.journal == linkAnyOfThese[i])  properties.journal = "[["+linkAnyOfThese[i]+"]]";
 				if (properties.work == linkAnyOfThese[i])  properties.work = "[["+linkAnyOfThese[i]+"]]";
@@ -491,13 +497,22 @@ function doExport() {
 			addPipedWikilink("African Arts", "African Arts (journal)", properties);
 			addPipedWikilink("America", "America (Jesuit magazine)", properties);
 			addPipedWikilink("Art Journal", "Art Journal (College Art Association journal)", properties);
+			addPipedWikilink("Architecture d'Aujourd Hui", "L'Architecture d'Aujourd'hui", properties);
 			addPipedWikilink("Atlantic", "The Atlantic (magazine)", properties);
+			addPipedWikilink("Aujourdhui", "Aujourd'hui", properties);
 			addPipedWikilink("Billboard", "Billboard (magazine)", properties);
 			addPipedWikilink("Body Politic", "The Body Politic (magazine)", properties);
+			addPipedWikilink("Canadian Art", "Canadian Art (magazine)", properties);
 			addPipedWikilink("Choice", "Choice: Current Reviews for Academic Libraries", properties);
 			addPipedWikilink("Commentary", "Commentary (magazine)", properties);
+			addPipedWikilink("Connaissance des Arts", ":fr:Connaissance des arts", properties);
+			addPipedWikilink("Connoisseur", "Connoisseur (magazine)", properties);
 			addPipedWikilink("Crash", "Crash (magazine)", properties);
 			addPipedWikilink("Critical Sociology", "Critical Sociology (journal)", properties);
+			addPipedWikilink("Domus", "Domus (magazine)", properties);
+			addPipedWikilink("Das Kunstwerk", ":de:Das Kunstwerk (Zeitschrift)", properties);
+			addPipedWikilink("Du", ":de:Du (Zeitschrift)", properties);
+			addPipedWikilink("Emporium", ":it:Emporium (periodico)", properties);
 			addPipedWikilink("Environmental Politics", "Environmental Politics (journal)", properties);
 			addPipedWikilink("Ethics", "Ethics (journal)", properties);
 			addPipedWikilink("Fact", "Fact (UK magazine)", properties);
@@ -508,6 +523,9 @@ function doExport() {
 			addPipedWikilink("International Affairs (Royal Institute of International Affairs 1944-)", "International Affairs (journal)", properties);
 			addPipedWikilink("Jezebel", "Jezebel (website)", properties);
 			addPipedWikilink("Jacobin", "Jacobin (magazine)", properties);
+			addPipedWikilink("Kunst und Künstler", ":de:Kunst und Künstler", properties);
+			addPipedWikilink("L'Oeil", "L'ŒIL", properties);
+			addPipedWikilink("Life", "Life (magazine)", properties);
 			addPipedWikilink("Metro", "Metro (British newspaper)", properties);
 			addPipedWikilink("Military Affairs", "Military Affairs (journal)", properties);
 			addPipedWikilink("Nature", "Nature (journal)", properties);
@@ -524,6 +542,9 @@ function doExport() {
 			addPipedWikilink("Salon", "Salon (website)", properties);
 			addPipedWikilink("Time", "Time (magazine)", properties);
 			addPipedWikilink("USA Today Magazine", "USA Today (magazine)", properties);
+			addPipedWikilink("Werk", ":de:Werk, Bauen + Wohnen", properties);
+			addPipedWikilink("werk, bauen + wohnen", ":de:Werk, Bauen + Wohnen", properties);
+			addPipedWikilink("XXe Siecle", ":fr:XXe siècle (revue)", properties);
 		}
 		
 		if (item.libraryCatalog == "EBSCOhost") {
